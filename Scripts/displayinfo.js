@@ -55,11 +55,23 @@ console.log(petSalon.pets[0].service);
 //display the pet salon info in the footer of html
 
 function displayPetSalonInfo(){
-document.getElementById("footer-info").innerHTML=`<p> ${petSalon.name}</p>`;
-document.getElementById("footer-info").innerHTML=`<p> ${petSalon.name}</p>`;
+document.getElementById("footer-info").innerHTML=`<p>Hi, we are ${petSalon.name}! - The finest Salon in Doggyville! <p>
+<p> <u> We are located at: </u> </p>
+<p><b> ${petSalon.address.number} ${petSalon.address.street} </b></p>
+<p><b> ${petSalon.address.city}, ${petSalon.address.State} ${petSalon.address.zip} </b></p>`;
 };
+
 displayPetSalonInfo();
 
+if (petSalon.pets.length >= 0){
+    alert("You have "+ petSalon.pets.length +" animals registered in the Salon today!");
+};
+
 function displayPetNames(){
-    
-}
+    document.getElementById("petnames").innerHTML+=`
+    <p> We have ${petSalon.pets[0].name} in the first appointment slot. </p>
+    <p> We have ${petSalon.pets[1].name} in the second appointment slot. </p>
+    <p> We have ${petSalon.pets[2].name} in the third appointment slot. </p>
+    `;
+};
+displayPetNames();

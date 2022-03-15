@@ -12,43 +12,12 @@ const petSalon={
         open:"8:00am",
         close:"6:00pm"
     },
-    pets:[//create pets array
-        { //first pet
-            name:"Hairy",
-            age:8,
-            gender:"Male",
-            type: "Dog",
-            service:"grooming",
-            breed:"Bichon-Frise",
-            ownerName:"Dean",
-            contactPhone:"466-6821"
-        },
-        { //second pet
-            name:"Oreo",
-            age:4,
-            gender:"Female",
-            type:"Cat",
-            service:"grooming",
-            breed:"long-hair",
-            ownerName:"Brandon",
-            contactPhone:"466-6821"
-        },
-        { //third pet
-            name:"Slither",
-            age:2,
-            gender:"Female",
-            type:"Snake",
-            service:"Skin Shaving",
-            breed:"Rattle",
-            ownerName:"Dean",
-            contactPhone:"466-6821"
-        }
-    ]
+    pets:[]
 }
-console.log(petSalon.address.zip);
-console.log(petSalon.pets.length);
+//console.log(petSalon.address.zip);
+//console.log(petSalon.pets.length);
 //display the service in console
-console.log(petSalon.pets[0].service);
+//console.log(petSalon.pets[0].service);
 
 
 
@@ -61,7 +30,7 @@ document.getElementById("footer-info").innerHTML=`<p>Hi, we are ${petSalon.name}
 <p><b> ${petSalon.address.city}, ${petSalon.address.State} ${petSalon.address.zip} </b></p>`;
 };
 
-displayPetSalonInfo();
+//displayPetSalonInfo();
 
 if (petSalon.pets.length >= 0){
     alert("You have "+ petSalon.pets.length +" animals registered in the Salon today!");
@@ -74,4 +43,4 @@ function displayPetNames(){
     <p> We have ${petSalon.pets[2].name} in the third appointment slot. </p>
     `;
 };
-displayPetNames();
+//displayPetNames();

@@ -1,4 +1,4 @@
-console.log("Script")
+//console.log("Script")
 
 // objects//
 const student= {
@@ -11,7 +11,7 @@ const student= {
         return this.firstName+ "  " + this.lastName;
     }
 };
-console.log(student.fullName());
+//console.log(student.fullName());
 
 function displayStudent(){
     //display student's info on HTML
@@ -22,3 +22,24 @@ function displayStudent(){
     document.getElementById("active").innerHTML=`<p><b>Is Student active?: </b>${student.isActive} </P>`;
 };
 displayStudent();
+
+//object constructor
+
+function studentC(fName,lName,age,email,isActive){
+    this.userFn=fName;
+    this.userLn=lName;
+    this.userAge=age;
+    this.userEmail=email;
+    this.isActive=isActive;
+}
+
+let student1 = new studentC("Vicky","warren",39,"vick@gmail.com",true);
+let student2 = new studentC("Brandon","Britt",30,"BB@gmail.com",true);
+
+function displayStudents(user){
+    return `Name: ${user.userFn} \n Email: ${user.userEmail}`;
+}
+
+console.log(displayStudents(student2));
+
+

@@ -17,3 +17,7 @@ footer{
     color: white;
     text-align: center;
 }
+.bg-color{
+    background-color: rgb(7, 243, 164);
+    color: white
+}
